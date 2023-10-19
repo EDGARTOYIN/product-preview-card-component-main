@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,600&family=Hanken+Grotesk:wght@100;200;500&family=Roboto:wght@300&display=swap');
+:root{
+    --font-family-default: 'Montserrat', sans-serif;
+    --font-family-secundary: 'Fraunces', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+  
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 5rem;
+
+    --clr-primary-dark-cyan-hsl:158, 36%, 37%;
+    --clr-primary-cream-hsl:30, 38%, 92%;
+
+    --clr-neutral-dark-blue-hsl:212, 21%, 14%;
+    --clr-neutral-dark-grayish-hsl:228, 12%, 48%;
+    --clr-neutral-white-hsl:0, 0%, 100%;
+
+
+    --clr-dark-cyan: var(--clr-dark-cyan-hsl);
+    --clr-cream: var(--clr-primary-cream-hsl);
+
+    --clr-dark-blue: var(--clr-neutral-dark-blue-hsl);
+    --clr-dark-grayish: var(--clr-neutral-dark-grayish-hsl);
+    --clr-white: var(--clr-neutral-white-hsl);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    font: inherit; 
+}
+
+img, svg
+{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    font-family: var(--font-family-default);
+    color:hsl(var(--clr-dark-grayish));
+    font-size: var(--fs-400);
+    background-color: hsl(var(--clr-cream));    
+}
+
+.perfume-resume{
+    display: grid;
+    max-width: 600px;
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+    --padding:2rem
+}
+
+.perfume{
+    background-color: hsl(var(--clr-white));
+    display: grid;
+    gap:1rem;
+    padding: var(--padding);
+}
+
+.perfume .section-title{
+    font-family: var(--font-family-secundary);
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    color: black;
+}
+
+.perfume .sub-title{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.flex-group{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+span{
+    color: hsl(var(--clr-primary-dark-cyan-hsl));
+    font-weight: var(--fw-bold);
+    font-family: var(--font-family-secundary);
+    font-size: var(--fs-700);
+}
+
+.button{
+    justify-content: center;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(var(--clr-primary-dark-cyan-hsl));
+}
+
+@media (min-width:600px){
+    body{
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .perfume-resume{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}
+
